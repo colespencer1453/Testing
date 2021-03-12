@@ -1,6 +1,6 @@
 name: MS Teams Deploy Card
 
-on: [push]
+on: [release]
 
 jobs:
   build:
