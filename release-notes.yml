@@ -1,7 +1,7 @@
 - name: Microsoft Teams Deploy Card
   uses: toko-bifrost/ms-teams-deploy-card@3.1.2
 
-on: [push]
+on: [release]
 
 jobs:
   build:
