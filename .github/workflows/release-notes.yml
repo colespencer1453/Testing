@@ -1,4 +1,4 @@
-on: [push]
+on: [release]
 
 jobs:
   hello_world_job:
@@ -7,9 +7,9 @@ jobs:
     steps:
     - name: Hello world action step
       id: hello
-      uses: actions/hello-world-javascript-action@v2.1
+      uses: colespencer1453/release-notes-action-python@v5
       with:
-        who-to-greet: 'Mona the Octocat'
+        myInput: ${{ toJson(github.event) }}
     # Use the output from the `hello` step
     - name: Get the output time
       run: echo "The time was ${{ steps.hello.outputs.time }}"
